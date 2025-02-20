@@ -4,7 +4,7 @@ Official implementation for the paper titled "Length-Controlled Margin-Based Pre
 
 <img src="./lmpo.png" width="1000px"></img>
 
-## Install Requirements
+## Ⅰ.Install Requirements
 
 Our codebase is built upon the [alignment-handbook](https://github.com/huggingface/alignment-handbook) repo. The following steps will guide you through the installation process.
 
@@ -30,7 +30,7 @@ You will also need Flash Attention 2 installed, which can be done by running:
 python -m pip install flash-attn --no-build-isolation
 ```
 
-## Training Scripts
+## Ⅱ.Training Scripts
 
 We provide four training config files for the four training setups reported in our paper. The training config is set for 4xA100 GPUs. You may need to adjust `num_processes` and `per_device_train_batch_size` based on your computation environment. 
 
@@ -52,7 +52,7 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/dee
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/llama-3-8b-instruct-lmpo.yaml
 ```
 
-## Evaluation
+## Ⅲ.Evaluation
 
 We follow the official implementation for evaluation on AlpacaEval 2 and Arena-Hard, as follows (more details can be found under [the eval directory](https://github.com/gengxuli/LMPO/tree/main/eval)):
 
@@ -60,5 +60,11 @@ We follow the official implementation for evaluation on AlpacaEval 2 and Arena-H
 
 * Arena-Hard: Please refer to to the [Arena-Hard-Auto repo](https://github.com/lm-sys/arena-hard-auto) for evaluation.
 
-## Acknowledgement
+## Ⅳ.Acknowledgement
 The project is built upon [SimPO](https://github.com/princeton-nlp/SimPO).
+
+## Ⅴ.Citation
+If you find this code useful for your research, please cite our papers
+```
+
+```
