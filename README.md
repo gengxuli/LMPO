@@ -37,19 +37,19 @@ We provide four training config files for the four training setups reported in o
 
 * Mistral-Base:
 ```shell
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/mistral-7b-base-simpo.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/mistral-7b-base-lmpo.yaml
 ```
 * Mistral-Instruct:
 ```shell
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/mistral-7b-instruct-simpo.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/mistral-7b-instruct-lmpo.yaml
 ```
 * Llama3-Base:
 ```shell
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/llama-3-8b-base-simpo.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/llama-3-8b-base-lmpo.yaml
 ```
 * Llama3-Instruct:
 ```shell
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/llama-3-8b-instruct-simpo.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/llama-3-8b-instruct-lmpo.yaml
 ```
 
 ## Acknowledgement
