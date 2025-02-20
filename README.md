@@ -32,24 +32,24 @@ python -m pip install flash-attn --no-build-isolation
 
 ## Training Scripts
 
-We provide four training config files for the four training setups reported in our paper. The training config is set for 4xH100 GPUs. You may need to adjust `num_processes` and `per_device_train_batch_size` based on your computation environment. 
+We provide four training config files for the four training setups reported in our paper. The training config is set for 4xA100 GPUs. You may need to adjust `num_processes` and `per_device_train_batch_size` based on your computation environment. 
 
 
+* Mistral-Base:
+```shell
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/mistral-7b-base-simpo.yaml
+```
 * Mistral-Instruct:
 ```shell
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_alpha_dpo.py training_configs/mistral-7b-instruct-alpha-dpo.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/mistral-7b-instruct-simpo.yaml
+```
+* Llama3-Base:
+```shell
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/llama-3-8b-base-simpo.yaml
 ```
 * Llama3-Instruct:
 ```shell
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_alpha_dpo.py training_configs/llama-3-8b-instruct-alpha-dpo.yaml
-```
-* Llama3-Instruct v0.2:
-```shell
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_alpha_dpo.py training_configs/llama-3-8b-instruct-alpha-dpo-v2.yaml
-```
-* Gemma2-Instruct:
-```shell
-ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_alpha_dpo.py training_configs/gemma-2-9b-it-alpha-dpo.yaml
+ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/llama-3-8b-instruct-simpo.yaml
 ```
 
 ## Acknowledgement
