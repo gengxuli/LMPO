@@ -6,7 +6,7 @@ Official implementation for the paper titled "Length-Controlled Margin-Based Pre
 
 ## Install Requirements
 
-Our codebase is built upon the [alignment-handbook repo](https://github.com/huggingface/alignment-handbook). The following steps will guide you through the installation process.
+Our codebase is built upon the [alignment-handbook](https://github.com/huggingface/alignment-handbook) repo. The following steps will guide you through the installation process.
 
 First, create a Python virtual environment using e.g. Conda:
 ```shell
