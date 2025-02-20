@@ -52,5 +52,13 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/dee
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_lmpo.py training_configs/llama-3-8b-instruct-lmpo.yaml
 ```
 
+## Evaluation
+
+We follow the official implementation for evaluation on AlpacaEval 2 and Arena-Hard, as follows (more details can be found under [the eval directory](https://github.com/princeton-nlp/SimPO/tree/main/eval)):
+
+* AlpacaEval 2: Please refer to the [AlpacaEval repo](https://github.com/tatsu-lab/alpaca_eval) for evaluation.
+
+* Arena-Hard: Please refer to to the [Arena-Hard-Auto repo](https://github.com/lm-sys/arena-hard-auto) for evaluation.
+
 ## Acknowledgement
 The project is built upon [SimPO](https://github.com/princeton-nlp/SimPO).
