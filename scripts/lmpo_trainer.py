@@ -610,14 +610,14 @@ class LMPOTrainer(Trainer):
 
         return losses, chosen_rewards, rejected_rewards
     
-    def z_normalization(self, ref_logratios, gamma_update=0.9):
+    def z_normalization(self, margin_c, update_c=0.9):
         with torch.no_grad():
-            ref_logratios_local = ref_logratios.clone()
-            ref_logratios_global = self.accelerator.gather(ref_logratios_local)
-            ref_logratios_global_mean = torch.mean(ref_logratios_global)
-            ref_logratios_global_std = torch.std(ref_logratios_global)
-            self.a = self.a * gamma_update + ref_logratios_global_mean * (1 - gamma_update)
-            self.b = self.b * gamma_update + ref_logratios_global_std * (1 - gamma_update)
+            margin_local = margin_c.clone()
+            margin_global = self.accelerator.gather(margin_local)
+            margin_global_mean = torch.mean(margin_global)
+            rmargin_global_std = torch.std(margin_global)
+            self.a = self.a * gamma_update + margin_global_mean * (1 - update_c)
+            self.b = self.b * gamma_update + margin_global_std * (1 - update_c)
 
     def concatenated_forward(
         self, model: nn.Module, batch: Dict[str, Union[List, torch.LongTensor]]
