@@ -66,5 +66,10 @@ The project is built upon [SimPO](https://github.com/princeton-nlp/SimPO).
 ## Ⅴ.Citation
 If you find this code useful for your research, please cite our papers
 ```
-
+@article{li2025length,
+  title={Length-Controlled Margin-Based Preference Optimization without Reference Model},
+  author={Li, Gengxu and Xia, Tingyu and Chang, Yi and Wu, Yuan},
+  journal={arXiv preprint arXiv:2502.14643},
+  year={2025}
+}
 ```
