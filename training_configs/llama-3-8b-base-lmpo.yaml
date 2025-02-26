@@ -11,7 +11,7 @@ dataset_splits:
 - test_prefs
 preprocessing_num_workers: 12
 
-# SimPOTrainer arguments
+# LMPOTrainer arguments
 bf16: true
 beta: 2.0
 gamma_beta_ratio: 0.5
