@@ -11,7 +11,7 @@ dataset_splits:
 - test
 preprocessing_num_workers: 12
 
-# SimPOTrainer arguments
+# LMPOTrainer arguments
 bf16: true
 beta: 2.5
 gamma_beta_ratio: 0.1
@@ -22,7 +22,7 @@ gradient_accumulation_steps: 16
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
   use_reentrant: False
-hub_model_id: simpo-exps
+hub_model_id: lmpo-exps
 learning_rate: 5.0e-7
 log_level: info
 logging_steps: 5
@@ -31,8 +31,8 @@ max_length: 2048
 max_prompt_length: 1800
 num_train_epochs: 1
 optim: adamw_torch
-output_dir: outputs/mistral-7b-instruct-simpo
-run_name: mistral-7b-instruct-simpo
+output_dir: outputs/mistral-7b-instruct-lmpo
+run_name: mistral-7b-instruct-lmpo
 per_device_train_batch_size: 2
 per_device_eval_batch_size: 4
 push_to_hub: false
