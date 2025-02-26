@@ -22,7 +22,7 @@ gradient_accumulation_steps: 16
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
   use_reentrant: False
-hub_model_id: simpo-exps
+hub_model_id: lmpo-exps
 learning_rate: 6.0e-7
 log_level: info
 logging_steps: 5
@@ -31,8 +31,8 @@ max_length: 2048
 max_prompt_length: 1800
 num_train_epochs: 1
 optim: adamw_torch
-output_dir: outputs/llama-3-8b-base-simpo
-run_name: llama-3-8b-base-simpo
+output_dir: outputs/llama-3-8b-base-lmpo
+run_name: llama-3-8b-base-lmpo
 per_device_train_batch_size: 2
 per_device_eval_batch_size: 4
 push_to_hub: false
