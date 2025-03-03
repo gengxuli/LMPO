@@ -1,6 +1,6 @@
 # Length-Controlled Margin-Based Preference Optimization(LMPO)
 
-Official implementation for the paper titled "Length-Controlled Margin-Based Preference Optimization without Reference Model".
+Official implementation for the paper titled ["Length-Controlled Margin-Based Preference Optimization without Reference Model"](https://arxiv.org/abs/2502.14643).
 
 <img src="./lmpo.png" width="1000px"></img>
 
