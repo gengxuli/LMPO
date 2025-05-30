@@ -54,14 +54,24 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/dee
 
 ## Ⅲ.Evaluation
 
-We follow the official implementation for evaluation on AlpacaEval 2 and Arena-Hard, as follows (more details can be found under [the eval directory](https://github.com/gengxuli/LMPO/tree/main/eval)):
+We follow the official implementation for evaluation on AlpacaEval 2, Arena-Hard, Open LLM Leadboard (v1) and Open LLM Leadboard (v2) as follows (more details can be found under [the eval directory](https://github.com/gengxuli/LMPO/tree/main/eval)):
 
 * AlpacaEval 2: Please refer to the [AlpacaEval repo](https://github.com/tatsu-lab/alpaca_eval) for evaluation.
 
 * Arena-Hard: Please refer to to the [Arena-Hard-Auto repo](https://github.com/lm-sys/arena-hard-auto) for evaluation.
 
+*  Open LLM Leadboard (v1): Please refer to to the [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness/tree/b281b0921b636bc36ad05c0b0b0763bd6dd43463) and [Open LLM Leadboard v1](https://huggingface.co/spaces/open-llm-leaderboard-old/open_llm_leaderboard) for evaluation.
+
+*  Open LLM Leadboard (v2): Please refer to to the [Language Model Evaluation Harness](https://github.com/huggingface/lm-evaluation-harness/tree/adding_all_changess) and [Open LLM Leadboard v2](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard)  for evaluation.
+
 ## Ⅳ.Acknowledgement
-The project is built upon [SimPO](https://github.com/princeton-nlp/SimPO).
+The project is built upon
+
+* [SimPO](https://github.com/princeton-nlp/SimPO).
+
+* [The Alignment Handbook](https://github.com/huggingface/alignment-handbook)
+
+* [TRL-Transformer Reinforcement Learning](https://github.com/huggingface/trl).
 
 ## Ⅴ.Citation
 If you find this code useful for your research, please cite our papers
